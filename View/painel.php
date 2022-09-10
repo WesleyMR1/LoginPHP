@@ -1,6 +1,8 @@
-<?php if (!isset($_SESSION)) {
-                    session_start();
-                }
+<?php 
+
+    include '../Controler/DAO/Protect.php'
+
+
 ?>
 
 <!DOCTYPE html>
@@ -13,5 +15,8 @@
 </head>
 <body>
  Welcome, <?php echo $_SESSION['nome']; ?>
+ <p>
+    <a href="..\Controler\DAO\Logout.php">Sair</a>
+ </p>
 </body>
 </html>
