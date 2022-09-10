@@ -14,14 +14,14 @@
             $usuario = $mysqli->real_escape_string($_POST['usuario']);
             $senha = $mysqli->real_escape_string($_POST['senha']);
 
-            $sql_code =  "select * from contas where usuario = '$usuario' and senha = '$senha'";
+            $sql_code =  "select * from contas where usuario = '$usuario' LIMIT 1";
             $sql_query = $mysqli->query($sql_code) or die("Falha na excução do código SQL: ". $mysqli->error);
 
             $quantidade = $sql_query->num_rows;
 
-            if ($quantidade == 1) {
+          $conta = $sql_query->fetch_assoc();
 
-                $conta = $sql_query->fetch_assoc();
+            if (password_verify($senha, $conta['senha'])) {
 
                 if (!isset($_SESSION)) {
                     session_start();
