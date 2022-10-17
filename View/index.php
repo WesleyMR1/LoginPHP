@@ -77,6 +77,16 @@
     </form>
 
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <a href="cadastrar.php">
+        <input type="button" value="Cadastrar">
+    </a>
+
+
     
 </body>
 </html>
