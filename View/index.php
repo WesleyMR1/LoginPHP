@@ -24,7 +24,7 @@
 
 <body>
 
-    <form action="../Controler/LoginController.php" method="POST">
+    <form action="../Controller/LoginController.php" method="POST">
         <p>
         <label> Usuario</label>
         <input type="text" name="usuario">

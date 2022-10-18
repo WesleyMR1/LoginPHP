@@ -1,6 +1,6 @@
 <?php 
 
-    include '../Controler/DAO/Protect.php'
+    include '../Controller/DAO/Protect.php';
 
 
 ?>
@@ -16,7 +16,7 @@
 <body>
  Welcome, <?php echo $_SESSION['nome']; ?>
  <p>
-    <a href="..\Controler\DAO\Logout.php">Sair</a>
+    <a href="..\Controller\DAO\Logout.php">Sair</a>
  </p>
 </body>
 </html>

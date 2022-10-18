@@ -25,12 +25,11 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])) {
         $senha = $_POST['senha'];
 
         // $sql_code =  "select * from contas where usuario = '$usuario' LIMIT 1";
-        $result = $pdo->query("select * from contas where usuario = '$usuario' LIMIT 1")
+        $result = $pdo->query("select * from contas where usuario = '$usuario' LIMIT 1");
         // $sql_query = $mysqli->query($sql_code) or die("Falha na excução do código SQL: ". $mysqli->error);
 
         // $quantidade = $sql_query->num_rows;
-
-      $conta = $sql_query->fetch_assoc();
+        $conta = $result->fetch(PDO::FETCH_ASSOC);
 
         if (password_verify($senha, $conta['senha'])) {
 
