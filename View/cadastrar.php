@@ -10,9 +10,15 @@
 
 <body>
 
-<form action="" method="POST">
+<form action="../Controller/CadastrarController.php" method="POST">
+
         <p>
-        <label> Usuario</label>
+        <label>Nome</label>
+        <input type="text" name="nome">
+        </p>
+
+        <p>
+        <label>Usuario</label>
         <input type="text" name="usuario">
         </p>
 
@@ -26,7 +32,10 @@
         </p>
     </form>
 
+    <?php
+    
 
+    ?>
 
     
 </body>
