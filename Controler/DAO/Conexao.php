@@ -1,41 +1,38 @@
-<?php
-     $hostname = "localhost";
-     $username = "root";
-     $password = "";
-     $database = "login";
+<!-- //   $hostname = "localhost";
+   //   $username = "root";
+   //   $password = "";
+   //   $database = "login";
 
-     $mysqli = new mysqli($hostname, $username,$password,$database);
+   //   $mysqli = new mysqli($hostname, $username,$password,$database);
 
-    if ($mysqli->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
+   //  if ($mysqli->connect_error) {
+   //        die("Connection failed: " . $conn->connect_error);
+   //    } -->
 
      
     
     
 
 
-?>
-
 <?php
 
-//function conectar(){
+function conectar(){
 
-   // $dsn = "mysql:dbname=Cadastro;host=localhost";
-  //  $username = "root";
-  //  $password = "";
+   $dsn = "mysql:dbname=login;host=localhost";
+   $username = "root";
+   $password = "";
     
-   // try {
-      //  $pdo = new PDO($dsn, $username, $password);
-   //   $pdo->exec("SET CHARACTER SET utf8");
-//
- //   } catch (PDOException $e) {
-       // echo "Error: ".$e;
-   // }
+   try {
+       $pdo = new PDO($dsn, $username, $password);
+     $pdo->exec("SET CHARACTER SET utf8");
 
-    //return $pdo;
+   } catch (PDOException $e) {
+       echo "Error: ".$e;
+   }
 
-//}
+    return $pdo;
+
+}
 
 
 

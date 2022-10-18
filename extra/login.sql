@@ -1,6 +1,6 @@
 create database  login;
 
-use database login
+use login
 
 create table  Contas(
     id int not null primary key auto_increment,
